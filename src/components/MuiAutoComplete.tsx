@@ -10,7 +10,7 @@ const skillss = ["HTML", "CSS", "Javascript", "Typescript", "React"];
 
 const skillsOptions = skillss.map((skill, index) => ({
   id: index + 1,
-  label: skill
+  label: skill,
 }));
 
 export const MuiAutoComplete = () => {
@@ -20,10 +20,10 @@ export const MuiAutoComplete = () => {
 
   return (
     <Stack spacing={2} width="250px">
-      <Autocomplete
+      {/* <Autocomplete
         options={skillss}
         renderInput={(params) => <TextField {...params} label="Skills" />}
-        value={skills}
+        value={skillss}
         onChange={(event: any, newValue: string | null) =>
           setSkillValue(newValue)
         }
@@ -33,7 +33,7 @@ export const MuiAutoComplete = () => {
         renderInput={(params) => <TextField {...params} label="Skills" />}
         value={skillValue}
         onChange={(event: any, newValue: Skill | null) => setSkills(newValue)}
-      />
+      /> */}
     </Stack>
   );
 };
